@@ -17,7 +17,7 @@
       <video autoplay loop>
         <source src="asset/Star background.mp4" type="video/mp4" />
       </video>
-    </div>
+    </div> 
 
     <!-- navbar -->
     <div class="nav">
@@ -38,41 +38,44 @@
           <li><a href="">cute Collection</a></li>
         </ul>
       </div>
-      <div class="search-icon">
-        <i class="fas fa-search"></i>
-      </div>
     </div>
     <!-- end navbar -->
     <!-- card -->
-    <div class="card">
+    <div class="card" id="cardContainer">
+      <!-- Card 1 -->
       <div class="kaos">
         <a href="card_1.html">
-          <img src="asset/kaos.png" alt="" />
+          <img src="asset/kaos (1).png" alt="" />
         </a>
       </div>
+      <!-- Card 2 -->
       <div class="kaos">
         <a href="card_2.html">
-          <img src="asset/kaos.png" alt="" />
+          <img src="asset/kaos (2).png" alt="" />
         </a>
       </div>
+      <!-- Card 3 -->
       <div class="kaos">
         <a href="card_3.html">
-          <img src="asset/kaos.png" alt="" />
+          <img src="asset/kaos (3).png" alt="" />
         </a>
       </div>
+      <!-- Card 4 -->
       <div class="kaos">
         <a href="card_4.html">
-          <img src="asset/kaos.png" alt="" />
+          <img src="asset/kaos (4).png" alt="" />
         </a>
       </div>
+      <!-- Card 5 -->
       <div class="kaos">
         <a href="card_5.html">
-          <img src="asset/kaos.png" alt="" />
+          <img src="asset/kaos (5).png" alt="" />
         </a>
       </div>
+      <!-- Card 6 -->
       <div class="kaos">
         <a href="card_6.html">
-          <img src="asset/kaos.png" alt="" />
+          <img src="asset/kaos (6).png" alt="" />
         </a>
       </div>
     </div>
@@ -96,5 +99,30 @@
         <p>&copy; 2023 All Rights Reserved. Company Name</p>
       </div>
     </footer>
+
+    <script>
+      // Function to filter the cards based on the search input
+      function searchCards() {
+        const searchInput = document.getElementById('searchInput');
+        const filter = searchInput.value.toUpperCase();
+        const cardContainer = document.getElementById('cardContainer');
+        const cards = cardContainer.getElementsByClassName('kaos');
+
+        // Loop through all the cards and hide those that don't match the search input
+        for (let i = 0; i < cards.length; i++) {
+          const card = cards[i];
+          const cardText = card.textContent || card.innerText;
+          if (cardText.toUpperCase().indexOf(filter) > -1) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        }
+      }
+
+      // Add event listener to the search input
+      const searchInput = document.getElementById('searchInput');
+      searchInput.addEventListener('input', searchCards);
+    </script>
   </body>
 </html>

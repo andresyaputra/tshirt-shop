@@ -38,7 +38,7 @@ addToCartButtons.forEach((button) => {
     const ukuran = parent.querySelector(".size-option-item.active").innerHTML;
     const jumlah = parent.querySelector('input[type="number"]').value;
 
-    const nohp = "625161141267";
+    const nohp = "6283838439753";
     const pesan = `https://api.whatsapp.com/send?phone=${nohp}&text=hallo, saya ingin membeli kaos ${nama} ukuran ${ukuran} jumlah ${jumlah} sekian`;
 
     const productId = button.getAttribute("data-id"); // ambil data-id dari button

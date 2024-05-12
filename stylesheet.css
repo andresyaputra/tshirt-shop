@@ -116,6 +116,7 @@ footer {
   border-radius: 10px;
   margin-left: 11px;
   cursor: pointer;
+  object-fit: cover;
 }
 
 #mainphoto{
